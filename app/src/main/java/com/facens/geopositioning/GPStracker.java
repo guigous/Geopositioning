@@ -15,11 +15,11 @@ import androidx.core.content.ContextCompat;
 
 public class GPStracker implements LocationListener{
     Context context;
-    //
+    //construtor da classe que utiliza o contexto c
     public GPStracker(Context c){
         context = c;
     }
-    //
+    //metodo que executa a atividade do gps
     public Location getLocation(){
     //pede acesso ao sistema de localizaçao
         if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
@@ -45,13 +45,13 @@ public class GPStracker implements LocationListener{
         //retorno nulo do metodo
         return null;
     }
-    //
+    //Metodo chamado quando o provedor de localizacao e desabilitado
     @Override
     public void onProviderDisabled(@NonNull String provider) {    }
-    //
+    //Metodo chamado quando a localizacao e alterada
     @Override
     public void onLocationChanged(@NonNull Location location) {    }
-    //
+    //Metodo chamado quando o status provedor de localizacao e alterado
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {    }
 }
